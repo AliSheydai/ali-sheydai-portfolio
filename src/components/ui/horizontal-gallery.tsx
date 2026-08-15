@@ -221,7 +221,7 @@ export function HorizontalGallery() {
 
   if (isMobile) {
     return (
-      <section style={{ position: "relative", padding: "12vw 0 90px" }} aria-label="Selected works">
+      <section style={{ position: "relative", padding: "10vw 0 100px" }} aria-label="Selected works">
         <div
           ref={scrollerRef}
           className="hide-scrollbar"
@@ -246,29 +246,31 @@ export function HorizontalGallery() {
   }
 
   return (
-    <section
-      ref={sectionRef}
-      style={{ position: "relative", height: "100vh", overflow: "hidden" }}
-      aria-label="Selected works"
-    >
-      <div
-        ref={trackRef}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          height: "100%",
-          gap: "6vw",
-          padding: "0 15vw",
-          willChange: "transform",
-        }}
+    <div style={{ margin: "5vw 0" }}>
+      <section
+        ref={sectionRef}
+        style={{ position: "relative", height: "100vh", overflow: "hidden" }}
+        aria-label="Selected works"
       >
-        {artworks.map((art, i) => (
-          <div key={art.id} style={{ width: "68vw", flex: "0 0 auto" }}>
-            <Slide art={art} index={i} active={i === activeIndex} priority={isPriority(i)} />
-          </div>
-        ))}
-      </div>
-      <ProgressBar progress={progress} count={artworks.length} activeIndex={activeIndex} />
-    </section>
+        <div
+          ref={trackRef}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            height: "100%",
+            gap: "6vw",
+            padding: "0 15vw",
+            willChange: "transform",
+          }}
+        >
+          {artworks.map((art, i) => (
+            <div key={art.id} style={{ width: "68vw", flex: "0 0 auto" }}>
+              <Slide art={art} index={i} active={i === activeIndex} priority={isPriority(i)} />
+            </div>
+          ))}
+        </div>
+        <ProgressBar progress={progress} count={artworks.length} activeIndex={activeIndex} />
+      </section>
+    </div>
   );
 }
