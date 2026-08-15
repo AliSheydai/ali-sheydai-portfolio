@@ -1,5 +1,4 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { artworks, type Artwork } from "@/lib/artworks";
@@ -22,15 +21,17 @@ function Slide({
   priority: boolean;
 }) {
   return (
-    <Link
-      to={`/artwork/${art.slug}`}
+    <a
+      href={art.link ?? `/artwork/${art.slug}`}
+      target={art.link ? "_blank" : undefined}
+      rel={art.link ? "noopener noreferrer" : undefined}
       className="gallery-slide block shrink-0"
       style={{ scrollSnapAlign: "center" }}
       aria-label={art.title}
     >
       <div
         style={{
-          aspectRatio: "16 / 9",
+          aspectRatio: `${art.w} / ${art.h}`,
           width: "100%",
           willChange: "transform, opacity",
           transform: active ? "scale(1)" : "scale(0.92)",
@@ -89,10 +90,10 @@ function Slide({
           {art.title}
         </h3>
         <p style={{ fontSize: 14, letterSpacing: "0.06em", textTransform: "uppercase", marginTop: 4 }}>
-          {art.medium} · {art.year}
+          {art.description}
         </p>
       </div>
-    </Link>
+    </a>
   );
 }
 

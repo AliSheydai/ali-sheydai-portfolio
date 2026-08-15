@@ -9,6 +9,18 @@ import {
 } from "framer-motion";
 import { ContactOverlay } from "./contact-overlay";
 
+import imgPerfume from "@/assets/projects/perfume.png";
+import imgLeganes from "@/assets/projects/leganes.png";
+import imgCoffeeShop from "@/assets/projects/coffee-shop.png";
+import imgPortfolio from "@/assets/projects/portfolio.png";
+import imgTodoApp2 from "@/assets/projects/todo-app-2.png";
+import imgTodoApp1 from "@/assets/projects/todo-app-1.png";
+import imgSpotifyClone from "@/assets/projects/spotify-clone.png";
+import imgWeatherDashboard from "@/assets/projects/weather-dashboard.png";
+import imgPostman from "@/assets/projects/postman.png";
+import imgDadegard from "@/assets/projects/dadegard.png";
+import imgMikrosazeh from "@/assets/projects/mikrosazeh.png";
+
 // ---------------------------------------------------------------------------
 // Image data — aspect ratios from original CDN, CSS offsets from source
 // ---------------------------------------------------------------------------
@@ -26,18 +38,18 @@ interface HeroImage {
 }
 
 const HERO_PHOTOS: string[] = [
-  "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&q=80", // abstract painting
-  "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=600&q=80", // colorful art
-  "https://images.unsplash.com/photo-1520420097861-e4959843b682?w=600&q=80", // gallery wall
-  "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=600&q=80", // oil painting
-  "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=600&q=80", // modern art
-  "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80", // paint brushes
-  "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&q=80", // abstract canvas
-  "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&q=80", // artwork detail
-  "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=600&q=80", // colorful abstract
-  "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?w=600&q=80", // painting texture
-  "https://images.unsplash.com/photo-1549490349-8643362247b5?w=600&q=80", // art studio
-  "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=600&q=80", // neon art
+  imgPerfume,
+  imgLeganes,
+  imgCoffeeShop,
+  imgPortfolio,
+  imgTodoApp2,
+  imgTodoApp1,
+  imgSpotifyClone,
+  imgWeatherDashboard,
+  imgPostman,
+  imgDadegard,
+  imgMikrosazeh,
+  imgPerfume,
 ];
 
 const IMAGES: HeroImage[] = [
