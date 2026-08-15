@@ -9,17 +9,17 @@ import {
 } from "framer-motion";
 import { ContactOverlay } from "./contact-overlay";
 
-import imgPerfume from "@/assets/projects/perfume.png";
-import imgLeganes from "@/assets/projects/leganes.png";
-import imgCoffeeShop from "@/assets/projects/coffee-shop.png";
-import imgPortfolio from "@/assets/projects/portfolio.png";
-import imgTodoApp2 from "@/assets/projects/todo-app-2.png";
-import imgTodoApp1 from "@/assets/projects/todo-app-1.png";
-import imgSpotifyClone from "@/assets/projects/spotify-clone.png";
-import imgWeatherDashboard from "@/assets/projects/weather-dashboard.png";
-import imgPostman from "@/assets/projects/postman.png";
-import imgDadegard from "@/assets/projects/dadegard.png";
-import imgMikrosazeh from "@/assets/projects/mikrosazeh.png";
+import imgDadegard_1 from "@/assets/hero-images/hero-dadegard-1.png";
+import imgDadegard_2 from "@/assets/hero-images/hero-dadegard-2.png";
+import imgDadegard_3 from "@/assets/hero-images/hero-dadegard-3.png";
+import imgPostman_1 from "@/assets/hero-images/hero-postman-1.png";
+import imgSpotify_1 from "@/assets/hero-images/hero-spotify-1.png";
+import imgMikrosazeh_1 from "@/assets/hero-images/hero-mikrosazeh-1.png";
+import imgMikrosazeh_2 from "@/assets/hero-images/hero-mikrosazeh-2.png";
+import imgMikrosazeh_3 from "@/assets/hero-images/hero-mikrosazeh-3.png";
+import imgWeather_1 from "@/assets/hero-images/hero-weather-1.png";
+import imgWeather_2 from "@/assets/hero-images/hero-weather-2.png";
+import imgWeather_3 from "@/assets/hero-images/hero-weather-3.png";
 
 // ---------------------------------------------------------------------------
 // Image data — aspect ratios from original CDN, CSS offsets from source
@@ -38,18 +38,18 @@ interface HeroImage {
 }
 
 const HERO_PHOTOS: string[] = [
-  imgPerfume,
-  imgLeganes,
-  imgCoffeeShop,
-  imgPortfolio,
-  imgTodoApp2,
-  imgTodoApp1,
-  imgSpotifyClone,
-  imgWeatherDashboard,
-  imgPostman,
-  imgDadegard,
-  imgMikrosazeh,
-  imgPerfume,
+  imgDadegard_1,
+  imgDadegard_3,
+  imgMikrosazeh_2,
+  imgMikrosazeh_3,
+  imgWeather_1,
+  imgPostman_1,
+  imgDadegard_1,
+  imgWeather_2,
+  imgWeather_3,
+  imgSpotify_1,
+  imgMikrosazeh_1,
+  imgPostman_1,
 ];
 
 const IMAGES: HeroImage[] = [
@@ -57,12 +57,12 @@ const IMAGES: HeroImage[] = [
   { id: 2, w: 705, h: 489, top: "7.1vw", left: "-6.8vw", parallax: null, parallaxPositive: true },
   { id: 3, w: 523, h: 781, top: "-7vw", left: "2vw", parallax: 2, parallaxPositive: false },
   { id: 4, w: 523, h: 784, top: "4.2vw", left: "-2.1vw", parallax: null, parallaxPositive: true },
-  { id: 5, w: 523, h: 784, top: "-8.7vw", left: "-2.1vw", parallax: 4, parallaxPositive: true },
+  { id: 5, w: 780, h: 605, top: "-8.7vw", left: "-2.1vw", parallax: 4, parallaxPositive: true },
   { id: 6, w: 507, h: 761, top: "9.2vw", left: "-4.3vw", parallax: 2, parallaxPositive: true },
   { id: 7, w: 451, h: 676, top: "-11.1vw", left: "10.4vw", parallax: 2, parallaxPositive: true },
-  { id: 8, w: 375, h: 563, top: "-3.7vw", left: "13.2vw", parallax: 5, parallaxPositive: true },
-  { id: 9, w: 523, h: 784, top: "-9vw", left: "-10.6vw", parallax: null, parallaxPositive: true },
-  { id: 10, w: 422, h: 632, top: "7.1vw", left: "1.8vw", parallax: 2, parallaxPositive: false },
+  { id: 8, w: 440, h: 563, top: "-3.7vw", left: "13.2vw", parallax: 5, parallaxPositive: true },
+  { id: 9, w: 784, h: 523, top: "-9vw", left: "-10.6vw", parallax: null, parallaxPositive: true },
+  { id: 10, w: 422, h: 698, top: "7.1vw", left: "1.8vw", parallax: 2, parallaxPositive: false },
   { id: 11, w: 523, h: 370, top: "-8.2vw", left: "0.7vw", parallax: 3, parallaxPositive: true },
   { id: 12, w: 423, h: 620, top: "5.4vw", left: "3.3vw", parallax: null, parallaxPositive: true },
 ];
@@ -432,7 +432,7 @@ export function HeroSection({ gridInView = false }: { gridInView?: boolean }) {
                     w={img.w}
                     h={img.h}
                     src={HERO_PHOTOS[img.id - 1]}
-                    className="w-[40vw] md:w-[30vw] lg:w-[20vw]"
+                    className={img.id === 5 ? "w-[50vw] md:w-[38vw] lg:w-[28vw]" : img.id === 9 ? "w-[50vw] md:w-[38vw] lg:w-[28vw]" : "w-[40vw] md:w-[30vw] lg:w-[20vw]"}
                     style={{
                       maxWidth: "none",
                       position: "relative",
